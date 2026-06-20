@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sohail Manga Attorneys | Professional Legal Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-red: #b71c1c;
+            --dark-red: #7f0000;
+            --light-red: #ffebee;
+            --pure-white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --pure-black: #212529;
+            --gold: #D4AF37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--pure-black);
+            line-height: 1.6;
+            background-color: var(--pure-white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--pure-white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+
+        .firm-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+
+        .firm-name span {
+            color: var(--pure-black);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-red);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-red);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-gray);
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)), url('law-school-time.jpg');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-badge {
+            color: var(--gold);
+            letter-spacing: 4px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero-subtitle {
+            color: #ddd;
+            max-width: 750px;
+            margin: auto;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: black;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: black;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: var(--pure-white);
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(183, 28, 28, 0.3);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background-color: var(--off-white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-red);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: perspective(1000px) rotateX(4deg) rotateY(4deg) translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        .service-card p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background-color: var(--pure-white);
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .about-content h2 span {
+            color: var(--primary-red);
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+        }
+
+        .highlight-text {
+            background-color: var(--light-red);
+            border-left: 4px solid var(--primary-red);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-text p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: var(--dark-gray);
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background-color: var(--pure-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-red);
+            font-size: 1.8rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        /* Locations Section */
+        .locations-section {
+            padding: 100px 0;
+            background-color: var(--pure-white);
+        }
+
+        .locations-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .location-card {
+            background-color: var(--off-white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .location-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-red);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .location-card h3 i {
+            font-size: 1.2rem;
+        }
+
+        .location-info {
+            margin-bottom: 25px;
+        }
+
+        .location-info p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .location-info i {
+            color: var(--primary-red);
+            margin-top: 3px;
+        }
+
+        .location-btn {
+            background-color: var(--primary-red);
+            color: var(--pure-white);
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .location-btn:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(183, 28, 28, 0.2);
+        }
+
+        .location-note {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: var(--light-red);
+            border-radius: 8px;
+        }
+
+        .location-note p {
+            color: var(--dark-gray);
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--pure-black);
+            color: var(--light-gray);
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--pure-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--primary-red);
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            color: var(--pure-white);
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after,
+        .footer-contact h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-red);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-red);
+            margin-top: 3px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* ===== PAGE TRANSITION OVERLAY - RED & WHITE THEME ===== */
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a0000, #4a0000, #7f0000);
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+
+        .page-transition.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .scale-loader {
+            font-size: 5rem;
+            color: #ffffff;
+            animation: scaleSwing 1.5s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes scaleSwing {
+            0% {
+                transform: rotate(-20deg) scale(1);
+            }
+            50% {
+                transform: rotate(20deg) scale(1.15);
+            }
+            100% {
+                transform: rotate(-20deg) scale(1);
+            }
+        }
+
+        .loader-text {
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-top: 25px;
+            letter-spacing: 4px;
+            animation: fadeText 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeText {
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(0.98);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .loader-bar {
+            width: 200px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            margin-top: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loader-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+            animation: loadingBar 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loadingBar {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .gavel-icon {
+            position: absolute;
+            font-size: 2rem;
+            color: #ffffff;
+            opacity: 0.6;
+            animation: gavelMove 2s ease-in-out infinite;
+        }
+
+        @keyframes gavelMove {
+            0% {
+                transform: rotate(0deg) translateX(-30px);
+                opacity: 0.3;
+            }
+            50% {
+                transform: rotate(30deg) translateX(30px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(0deg) translateX(-30px);
+                opacity: 0.3;
+            }
+        }
+
+        .loader-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-container,
+            .locations-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links.show {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--pure-white);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-gold,
+            .btn-outline {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-badge {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+
+            .firm-name {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .location-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== PAGE TRANSITION OVERLAY ===== -->
+    <div class="page-transition" id="pageTransition">
+        <div class="loader-container">
+            <div class="scale-loader">
+                <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="gavel-icon">
+                <i class="fas fa-gavel"></i>
+            </div>
+        </div>
+        <div class="loader-text">Sohail Manga Attorneys</div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-section">
+                <img src="sm logo.jpg" alt="Sohail Manga Attorneys Logo" class="logo-img" />
+                <div class="firm-name">Sohail Manga <span>Attorneys</span></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="Expertise.html">Areas of Expertise</a>
+                <a href="OurTeam.html">Our Team</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="ContactUs.html">Contact Us</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="particles-js"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">
+                JOHANNESBURG'S TRUSTED LEGAL PARTNER
+            </span>
+            <h1 class="hero-title">
+                Defending Rights.<br />
+                Protecting Futures.
+            </h1>
+            <p class="hero-subtitle">
+                Strategic legal representation in Criminal Law,
+                Estate Planning, Property Matters and Labour Law.
+            </p>
+            <div class="hero-buttons">
+                <a href="ContactUs.html" class="btn-gold">
+                    Schedule Consultation
+                </a>
+                <a href="Expertise.html" class="btn-outline">
+                    Explore Expertise
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Legal Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Criminal Defense</h3>
+                    <p>Comprehensive defense strategies tailored to protect your rights and future. We navigate complex criminal proceedings with expertise and determination.</p>
+                    <a href="Expertise.html" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Estate Planning</h3>
+                    <p>Secure your legacy with comprehensive estate planning, wills, trusts, and probate services designed to protect your assets and family's future.</p>
+                    <a href="Expertise.html" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Labor Law</h3>
+                    <p>Protecting employee and employer rights with expert guidance on workplace disputes, contracts, negotiations, and compliance matters.</p>
+                    <a href="Expertise.html" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="law-school-time.jpg" alt="Sohail Manga Attorneys Team" width="100%" />
+            </div>
+            <div class="about-content">
+                <h2>Why Choose <span>Sohail Manga Attorneys</span></h2>
+                <p>With over a decade of dedicated legal service, we've established ourselves as a trusted firm in the Johannesburg area. Our commitment to excellence is reflected in every case we handle.</p>
+
+                <div class="highlight-text">
+                    <p>We deliver precise, results-oriented legal solutions across multiple practice areas, supported by a dedicated team of highly skilled attorneys committed to achieving optimal outcomes for every client.</p>
+                </div>
+
+                <p>Our firm combines extensive legal knowledge with personalized attention to ensure each client receives the strategic advocacy they deserve.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>We are passionate about the work we do and proud of the quality we produce for our clients.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Expert Lawyers</h3>
+                    <p>Our team consists of highly skilled, dedicated attorneys across various practice areas.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Local Knowledge</h3>
+                    <p>Extensive experience in the South African legal system with regional expertise.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Client Focus</h3>
+                    <p>We understand each client's unique needs and strive for legal excellence in every challenge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section" id="locations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Where to Find Us</h2>
+            </div>
+            <div class="locations-container">
+                <div class="location-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Lenasia Office</h3>
+                    <div class="location-info">
+                        <p><i class="fas fa-map-pin"></i> 217 Honeysuckle Avenue, Lenasia</p>
+                        <p><i class="fas fa-phone"></i> 010 443 3945</p>
+                        <p><i class="fas fa-envelope"></i> admin@mangalaw.co.za</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    </div>
+                    <a href="https://www.google.com/maps/place/217+Honeysuckle+Ave,+Lenasia,+1821/@-26.3291069,27.8372921,17z/data=!3m1!4b1!4m6!3m5!1s0x1e95a601ee9e3627:0x63056037fb6146bd!8m2!3d-26.3280299!4d27.83601!16s%2Fg%2F11cshp8r2y?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" class="location-btn">Get Directions</a>
+                </div>
+
+                <div class="location-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Robertsham Office</h3>
+                    <div class="location-info">
+                        <p><i class="fas fa-map-pin"></i> 74 Xavier Street, Robertsham</p>
+                        <p><i class="fas fa-phone"></i> (011) 683-5678</p>
+                        <p><i class="fas fa-envelope"></i> robertsham@sohailmanga.co.za</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=74+Xavier+St+Robertsham+Johannesburg"
+                    target="_blank" class="location-btn">Get Directions</a>
+                </div>
+            </div>
+            <div class="location-note">
+                <p>With over a decade of legal service, we've expanded our reach across Johannesburg with two strategic locations to better serve our clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">Sohail Manga <span>Attorneys</span></div>
+                <p>Providing strategic legal advocacy focused on achieving optimal outcomes for our clients across Johannesburg and beyond.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Expertise.html">Areas of Expertise</a></li>
+                    <li><a href="OurTeam.html">Our Team</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Information</h4>
+                <p><i class="fas fa-phone"></i> 010 443 3945</p>
+                <p><i class="fas fa-envelope"></i> admin@mangalaw.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 217 Honeysuckle Avenue, Lenasia</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 Sohail Manga Attorneys. All rights reserved. | Designed with Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // ===== PAGE TRANSITION =====
+        (function() {
+            'use strict';
+
+            var overlay = document.getElementById('pageTransition');
+            if (!overlay) return;
+
+            function showTransition() {
+                overlay.classList.add('active');
+            }
+
+            function hideTransition() {
+                overlay.classList.remove('active');
+            }
+
+            var links = document.querySelectorAll('a[href]');
+            links.forEach(function(link) {
+                if (link.href.startsWith('http') && !link.href.includes(window.location.hostname)) return;
+                if (link.href.startsWith('mailto:')) return;
+                if (link.href.startsWith('tel:')) return;
+                if (link.href.startsWith('javascript:')) return;
+                if (link.getAttribute('href') === '#') return;
+                if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) return;
+                if (link.target === '_blank') return;
+
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showTransition();
+                    setTimeout(function() {
+                        window.location.href = link.href;
+                    }, 700);
+                });
+            });
+
+            window.addEventListener('load', function() {
+                setTimeout(hideTransition, 400);
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(hideTransition, 300);
+            });
+
+            window.addEventListener('popstate', function() {
+                showTransition();
+                setTimeout(hideTransition, 800);
+            });
+
+        })();
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+
+            const icon = this.querySelector('i');
+            if (navLinks.classList.contains('show')) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const menuBtn = document.getElementById('mobileMenuBtn');
+
+            if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
+                navLinks.classList.remove('show');
+                const icon = menuBtn.querySelector('i');
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        // Particles.js configuration
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#D4AF37"
+                },
+                shape: {
+                    type: "circle"
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#D4AF37",
+                    opacity: 0.3,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>

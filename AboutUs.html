@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Sohail Manga Attorneys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-red: #b71c1c;
+            --dark-red: #7f0000;
+            --light-red: #ffebee;
+            --pure-white: #ffffff;
+            --off-white: #f8f9fa;
+            --light-gray: #e9ecef;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --pure-black: #212529;
+            --gold: #D4AF37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--pure-black);
+            line-height: 1.6;
+            background-color: var(--pure-white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--pure-white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+
+        .firm-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+
+        .firm-name span {
+            color: var(--pure-black);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-red);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-red);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-gray);
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Hero Section with Particles */
+        .about-hero {
+            min-height: 60vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(33, 37, 41, 0.85), rgba(33, 37, 41, 0.9)), url('law-school-time.jpg');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-badge {
+            color: var(--gold);
+            letter-spacing: 4px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: var(--pure-white);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--light-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: black;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: black;
+        }
+
+        /* About Content */
+        .about-section {
+            padding: 100px 0;
+            background-color: var(--off-white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-red);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            background-color: var(--pure-white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 50px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--medium-gray);
+            margin-bottom: 25px;
+        }
+
+        .highlight-box {
+            background-color: var(--light-red);
+            border-left: 4px solid var(--primary-red);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            font-style: italic;
+            color: var(--dark-gray);
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 80px 0;
+            background-color: var(--pure-white);
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--pure-white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-description {
+            text-align: center;
+            color: var(--medium-gray);
+        }
+
+        .video-description h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        /* Achievements */
+        .achievements-section {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .achievement-card {
+            background-color: var(--pure-white);
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .achievement-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--light-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary-red);
+            font-size: 2rem;
+        }
+
+        .achievement-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        .achievement-card p {
+            color: var(--medium-gray);
+        }
+
+        /* Gift of Givers Section */
+        .gog-section {
+            padding: 80px 0;
+            background-color: var(--pure-white);
+        }
+
+        .gog-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            background-color: var(--off-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .gog-image-container {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .gog-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 400px;
+            transition: transform 0.5s ease;
+        }
+
+        .gog-container:hover .gog-image {
+            transform: scale(1.03);
+        }
+
+        .gog-content {
+            padding: 50px;
+        }
+
+        .gog-badge {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: var(--pure-white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .gog-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+
+        .gog-content p {
+            color: var(--medium-gray);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .gog-highlight {
+            background-color: var(--light-red);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-red);
+            margin-top: 25px;
+        }
+
+        .gog-highlight p {
+            color: var(--dark-gray);
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 80px 0;
+            background-color: var(--pure-white);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            background-color: var(--off-white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .value-item i {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .value-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        .value-item p {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Button */
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: var(--pure-white);
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(183, 28, 28, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--pure-black);
+            color: var(--light-gray);
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--pure-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--primary-red);
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            color: var(--pure-white);
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after,
+        .footer-contact h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-red);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-red);
+            margin-top: 3px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* ===== PAGE TRANSITION OVERLAY - RED & WHITE THEME ===== */
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a0000, #4a0000, #7f0000);
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+
+        .page-transition.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .scale-loader {
+            font-size: 5rem;
+            color: #ffffff;
+            animation: scaleSwing 1.5s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes scaleSwing {
+            0% {
+                transform: rotate(-20deg) scale(1);
+            }
+            50% {
+                transform: rotate(20deg) scale(1.15);
+            }
+            100% {
+                transform: rotate(-20deg) scale(1);
+            }
+        }
+
+        .loader-text {
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-top: 25px;
+            letter-spacing: 4px;
+            animation: fadeText 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeText {
+            0%, 100% {
+                opacity: 0.4;
+                transform: scale(0.98);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .loader-bar {
+            width: 200px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            margin-top: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loader-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+            animation: loadingBar 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loadingBar {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .gavel-icon {
+            position: absolute;
+            font-size: 2rem;
+            color: #ffffff;
+            opacity: 0.6;
+            animation: gavelMove 2s ease-in-out infinite;
+        }
+
+        @keyframes gavelMove {
+            0% {
+                transform: rotate(0deg) translateX(-30px);
+                opacity: 0.3;
+            }
+            50% {
+                transform: rotate(30deg) translateX(30px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(0deg) translateX(-30px);
+                opacity: 0.3;
+            }
+        }
+
+        .loader-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.show {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--pure-white);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                gap: 15px;
+                z-index: 999;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .about-text {
+                padding: 35px;
+            }
+
+            .video-container {
+                padding: 25px;
+            }
+
+            .gog-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gog-image {
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .about-hero {
+                min-height: 50vh;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .about-text {
+                padding: 25px;
+            }
+
+            .gog-content {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-badge {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+
+            .firm-name {
+                font-size: 1.2rem;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .about-text {
+                padding: 20px;
+            }
+
+            .video-container {
+                padding: 15px;
+            }
+
+            .gog-content {
+                padding: 20px;
+            }
+
+            .gog-content h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== PAGE TRANSITION OVERLAY ===== -->
+    <div class="page-transition" id="pageTransition">
+        <div class="loader-container">
+            <div class="scale-loader">
+                <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="gavel-icon">
+                <i class="fas fa-gavel"></i>
+            </div>
+        </div>
+        <div class="loader-text">Sohail Manga Attorneys</div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-section">
+                <img src="sm logo.jpg" alt="Sohail Manga Attorneys Logo" class="logo-img" />
+                <div class="firm-name">Sohail Manga <span>Attorneys</span></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="Expertise.html">Areas of Expertise</a>
+                <a href="OurTeam.html">Our Team</a>
+                <a href="AboutUs.html" class="active">About Us</a>
+                <a href="ContactUs.html">Contact Us</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Particles -->
+    <section class="about-hero">
+        <div id="particles-js"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Our Story</span>
+            <h1 class="hero-title">Our Story & Commitment</h1>
+            <p class="hero-subtitle">For over a decade, Sohail Manga Attorneys has been providing exceptional legal services with dedication, expertise, and a client-focused approach.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn-gold">Learn More About Us</a>
+                <a href="ContactUs.html" class="btn-outline">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Firm</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sohail Manga Attorneys was founded in Lenasia by Director Sohail Manga, who graduated from the prestigious University of the Witwatersrand with an LLB degree. With a vision to provide accessible and professional legal services to the community, our firm began its journey with a commitment to excellence and integrity.</p>
+
+                    <p>Over the years, our firm has successfully completed numerous cases across various areas of law. We have achieved significant victories in criminal cases, divorce matters, property transfers, estate planning, labor disputes, and civil litigation. Our track record of success is built on meticulous preparation, strategic thinking, and unwavering dedication to our clients' interests.</p>
+
+                    <div class="highlight-box">
+                        <p>From our humble beginnings in Lenasia, we have expanded to serve clients across Johannesburg with two strategic branches in Lenasia and Robertsham.</p>
+                    </div>
+
+                    <p>At Sohail Manga Attorneys, we strive to give our clients the best legal representation possible. We understand that each client's situation is unique, and we approach every case with personalized attention and care. Our team of experienced attorneys works collaboratively to ensure comprehensive legal solutions for even the most complex matters.</p>
+
+                    <p>We have handled numerous cases for diverse clients, from individuals facing personal legal challenges to businesses navigating complex commercial matters. Our commitment to justice, combined with our deep understanding of South African law, has established us as a trusted legal partner in the community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Insights from Our Director</h2>
+            </div>
+
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/qeo6s-Clk8o"
+                            title="Sohail Manga on Radio Islam - Family Law Discussion"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-description">
+                    <h3>Sensitive Topics in Family Law</h3>
+                    <p>Our Director, Sohail Manga, was invited as a guest speaker on Radio Islam to discuss the sensitive topic of Family Law. In this insightful discussion, he shares valuable perspectives on navigating complex family legal matters with compassion and expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Achievements</h2>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Wits Graduate</h3>
+                    <p>Director Sohail Manga graduated from the University of the Witwatersrand, one of South Africa's premier law schools.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>10+ Years Experience</h3>
+                    <p>Over a decade of dedicated legal practice serving clients across Johannesburg and beyond.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Numerous Cases Won</h3>
+                    <p>Successfully handled and won cases across multiple practice areas including criminal, family, and property law.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Two Locations</h3>
+                    <p>Expanded from our Lenasia roots to serve clients from two convenient office locations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift of Givers Section -->
+    <section class="gog-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Community Involvement</h2>
+            </div>
+
+            <div class="gog-container">
+                <div class="gog-image-container">
+                    <img src="gifofgiversSohail.JPG" alt="Sohail Manga assisting Gift of the Givers Foundation with COVID-19 facility legal matters" class="gog-image" />
+                </div>
+                <div class="gog-content">
+                    <span class="gog-badge">Community Service</span>
+                    <h3>Partnering with Gift of the Givers Foundation</h3>
+                    <p>During the challenging times of the COVID-19 pandemic, our Director Sohail Manga demonstrated his commitment to community service by providing pro bono legal assistance to the Gift of the Givers Foundation.</p>
+
+                    <p>He assisted with all legal aspects of establishing and operating their COVID-19 treatment facility, ensuring that the foundation could operate efficiently and effectively in their humanitarian mission.</p>
+
+                    <p>This included navigating complex regulatory requirements, drafting necessary agreements, and providing ongoing legal counsel to support their critical pandemic response efforts.</p>
+
+                    <div class="gog-highlight">
+                        <p>"It was an honor to support Gift of the Givers in their vital work during the pandemic. Legal expertise should serve not only our clients but also our community in times of need."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Client-Centered</h3>
+                    <p>We prioritize our clients' needs and work tirelessly to achieve their desired outcomes with personalized attention.</p>
+                </div>
+
+                <div class="value-item">
+                    <i class="fas fa-scale-balanced"></i>
+                    <h3>Legal Excellence</h3>
+                    <p>We maintain the highest standards of legal practice through continuous learning and professional development.</p>
+                </div>
+
+                <div class="value-item">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Integrity & Trust</h3>
+                    <p>We build lasting relationships based on honesty, transparency, and ethical practice in all our dealings.</p>
+                </div>
+
+                <div class="value-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Community Focus</h3>
+                    <p>We're committed to serving our community with accessible and compassionate legal services for all.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">Sohail Manga <span>Attorneys</span></div>
+                <p>Providing exceptional legal services with dedication, expertise, and a client-focused approach for over a decade.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Expertise.html">Areas of Expertise</a></li>
+                    <li><a href="OurTeam.html">Our Team</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Lenasia & Robertsham Offices</p>
+                <p><i class="fas fa-phone"></i> 010 443 3945</p>
+                <p><i class="fas fa-envelope"></i> admin@mangalaw.co.za</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 Sohail Manga Attorneys. All rights reserved. | Designed with Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // ===== PAGE TRANSITION =====
+        (function() {
+            'use strict';
+
+            var overlay = document.getElementById('pageTransition');
+            if (!overlay) return;
+
+            function showTransition() {
+                overlay.classList.add('active');
+            }
+
+            function hideTransition() {
+                overlay.classList.remove('active');
+            }
+
+            var links = document.querySelectorAll('a[href]');
+            links.forEach(function(link) {
+                if (link.href.startsWith('http') && !link.href.includes(window.location.hostname)) return;
+                if (link.href.startsWith('mailto:')) return;
+                if (link.href.startsWith('tel:')) return;
+                if (link.href.startsWith('javascript:')) return;
+                if (link.getAttribute('href') === '#') return;
+                if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) return;
+                if (link.target === '_blank') return;
+
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showTransition();
+                    setTimeout(function() {
+                        window.location.href = link.href;
+                    }, 700);
+                });
+            });
+
+            window.addEventListener('load', function() {
+                setTimeout(hideTransition, 400);
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(hideTransition, 300);
+            });
+
+            window.addEventListener('popstate', function() {
+                showTransition();
+                setTimeout(hideTransition, 800);
+            });
+
+        })();
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+
+            const icon = this.querySelector('i');
+            if (navLinks.classList.contains('show')) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const menuBtn = document.getElementById('mobileMenuBtn');
+
+            if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
+                navLinks.classList.remove('show');
+                const icon = menuBtn.querySelector('i');
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId.startsWith('http')) return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const navLinks = document.getElementById('navLinks');
+                    navLinks.classList.remove('show');
+                    const icon = document.getElementById('mobileMenuBtn').querySelector('i');
+                    icon.className = 'fas fa-bars';
+                }
+            });
+        });
+
+        // Particles.js configuration
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#D4AF37"
+                },
+                shape: {
+                    type: "circle"
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#D4AF37",
+                    opacity: 0.3,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>

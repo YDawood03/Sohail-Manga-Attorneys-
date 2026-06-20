@@ -35,10 +35,10 @@ Visit the live website here: [http://mangalaw.co.za](http://mangalaw.co.za)
 <img width="1345" alt="Home 1" src="https://github.com/user-attachments/assets/74a2a962-56e6-4499-b4e3-35afaecc5684" />
 <img width="1341" alt="Home 2" src="https://github.com/user-attachments/assets/c41f7094-e518-4b26-9719-99373bb56d89" />
 <img width="1338" alt="Home 3" src="https://github.com/user-attachments/assets/29bddd79-5c53-4c46-b831-a972121743a6" />
-
- About & Services
 <img width="1335" alt="About" src="https://github.com/user-attachments/assets/df5127fb-4471-4e2d-a526-bf65a9b9b915" />
 <img width="1295" alt="Services" src="https://github.com/user-attachments/assets/5dd9aaff-201b-4ed4-a7dd-d145e80a4c82" />
+
+Expertise
 <img width="1341" alt="Services 2" src="https://github.com/user-attachments/assets/7ea875f8-9f16-481a-9236-e769b938fc29" />
 
  Our Team
